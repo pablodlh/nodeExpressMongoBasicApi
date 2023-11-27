@@ -21,8 +21,11 @@ services:
 
 $ docker compose up //Puede pedir permisos de superusuario
 
+En mongo DB:
+Crear Base de datos llamada :"database-prueba"
+Crear Collection llamado "users"
 
 EndPoints de la api:
-GET "/users" --> Get All Users
-GET "/users/:id" --> Get User By Id
-POST "/users" --> Add New User 
+GET "/usuarios" --> Get All Users
+GET "/usuarios/:id" --> Get User By Id
+POST "/usuarios" --> Add New User 
