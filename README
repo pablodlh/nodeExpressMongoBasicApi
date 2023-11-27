@@ -1,5 +1,14 @@
-Docker compose para levantar mongo
+Levantar mongoDB
 
+Requisitos:
+MongoDBCompass (https://www.mongodb.com/try/download/compass) // Para manejar la base de datos mediante interfaz grafica
+Docker
+
+En una carpeta nueva:
+$ nano compose.yaml 
+añadir el siguiente contenido:
+
+-----------------------------------------
 services:
   mongo:
     restart: always
@@ -8,3 +17,12 @@ services:
       - ./data:/data/db
     ports:
       - "27017:27017"
+-----------------------------------------
+
+$ docker compose up //Puede pedir permisos de superusuario
+
+
+EndPoints de la api:
+GET "/users" --> Get All Users
+GET "/users/:id" --> Get User By Id
+POST "/users" --> Add New User 
