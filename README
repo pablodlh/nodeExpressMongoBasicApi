@@ -1,0 +1,13 @@
+
+
+
+Docker compose para levantar mongo
+
+services:
+  mongo:
+    restart: always
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
